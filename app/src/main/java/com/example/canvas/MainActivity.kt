@@ -1,8 +1,10 @@
 package com.example.canvas
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -11,6 +13,7 @@ import com.example.canvas.ui.theme.CanvasTheme
 import com.example.canvas.ui.theme.PainterCanvas
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -21,9 +24,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    PainterCanvas()
+//                    PainterCanvas()
 
-                    
+                    SmoothLineGraph()
 //                    Box(modifier = Modifier.size(300.dp), contentAlignment = Alignment.Center) {
 ////                        InstagramIcon()
 //
